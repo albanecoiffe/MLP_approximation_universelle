@@ -1,6 +1,6 @@
 # 🌐 Étude de l'Approximation Universelle dans les Réseaux de Neurones
 
-[Notebook]()
+[Notebook](https://albanecoiffe.github.io/MLP_approximation_universelle/)
 
 ## 🧠 Objectif   
 L'objectif de ce laboratoire est d'étudier une propriété fondamentale des réseaux de neurones statiques (non récurrents) : **l'approximation universelle**. Cette propriété permet aux réseaux de neurones, même avec une seule couche cachée, d'approximer n'importe quelle fonction continue avec suffisamment de neurones.
