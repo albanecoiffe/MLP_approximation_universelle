@@ -1,35 +1,33 @@
-# 🌐 Étude de l'Approximation Universelle dans les Réseaux de Neurones
+# 🌐 Study of Universal Approximation in Neural Networks
 
 [Notebook](https://albanecoiffe.github.io/MLP_approximation_universelle/)
 
-## 🧠 Objectif   
-L'objectif de ce laboratoire est d'étudier une propriété fondamentale des réseaux de neurones statiques (non récurrents) : **l'approximation universelle**. Cette propriété permet aux réseaux de neurones, même avec une seule couche cachée, d'approximer n'importe quelle fonction continue avec suffisamment de neurones.
+## 🧠 Objective
+The goal of this lab is to study a fundamental property of static (non-recurrent) neural networks: the universal approximation theorem. This property states that neural networks, even with just one hidden layer, can approximate any continuous function given sufficient neurons.
 
-Dans ce lab, nous entraînons un Multi-Layer Perceptron (MLP) avec une seule couche cachée sur une fonction définie par morceaux. Nous analysons ensuite comment le réseau approxime cette fonction.
+In this lab, we train a Multi-Layer Perceptron (MLP) with a single hidden layer on a piecewise-defined function and analyze how well the network approximates it.
 
-## 📊 Étapes du Lab
-### 1. Génération des Données
+## 📊 Lab Steps
+### 1. Data Generation
+The function f(x) is defined as follows:      
+𝑓(𝑥)={     
+sin(𝜋𝑥) si 𝑥∈[−1,1[       
+0 si 𝑥∈[−2,−1]∪[1,2]       
+-Adding Gaussian noise (0,0.2) to the generated data.
+- Generating multiple training and test samples from this function.
 
-- La fonction f(x) est définie comme suit :
-𝑓(𝑥)={
-sin(𝜋𝑥) si 𝑥∈[−1,1[
-0 si 𝑥∈[−2,−1]∪[1,2]
-- Ajout d'un bruit normal N(0,0.2) aux données générées.   
-- Génération de multiples échantillons d'entraînement et de test à partir de cette fonction.
+### 2. mplementing MLP with TensorFlow
 
-### 2. Implémentation de MLP avec TensorFlow
-
-- Utilisation d'un MLP simple avec une seule couche cachée pour approximer la fonction générée.
-- Exploration de différentes architectures avec un nombre de neurones cachés variant (par exemple, 1, 3, 5, 7 neurones).
+- Using a simple MLP with one hidden layer to approximate the generated function.
+- Exploring different architectures by varying the number of hidden neurons (e.g., 1, 3, 5, 7 neurons).      
   
-### 3. Recommandations
+### Recommendations
+- Analyzing results: Start with a small number of neurons and observe how the function approximation evolves.
+- Testing variations: Experiment with different hidden layer sizes to see how the approximation becomes more or less "sparse" depending on the model's capacity.
+- Evaluating performance: Assess the generalization of the model by testing it on a separate test set.      
 
-- Analyse des résultats : Démarrez avec un petit nombre de neurones et observez comment l'approximation de la fonction évolue.
-- Variations : Testez différentes configurations de neurones dans la couche cachée pour observer comment l'approximation devient plus ou moins "sparse" en fonction de la capacité du modèle.
-- Évaluation des performances : Testez la généralisation du modèle en évaluant ses performances sur un ensemble de test.
-
-## 🛠️ Technologies Utilisées  
-- `Python` : Langage de programmation principal pour l'implémentation.   
-- `TensorFlow` : Framework pour la création et l'entraînement du réseau de neurones MLP.
-- `NumPy` : Pour la génération et la manipulation des données.
-- `Matplotlib` : Pour visualiser les approximations des fonctions.
+## 🛠️ Technologies Used
+- Python: Main programming language for implementation.
+- TensorFlow: Framework for building and training the MLP neural network.
+- NumPy: For generating and manipulating data.
+- Matplotlib: For visualizing function approximations.
